@@ -24,21 +24,6 @@ O projeto permite **inserir, atualizar, deletar e listar pilotos**, mantendo o r
 
 ---
 
-## Estrutura do projeto
-
-src/
-├─ dao/
-│ ├─ PilotoDAO.java # Interface CRUD
-│ └─ impl/
-│ └─ PilotoDAOImpl.java # Implementação JDBC
-├─ model/
-│ └─ Piloto.java # Classe modelo do piloto
-├─ util/
-│ └─ Conexao.java # Conexão com MySQL
-└─ Main.java # Classe principal para testes
-
----
-
 Todas as operações usam PreparedStatement para evitar SQL Injection
 
 

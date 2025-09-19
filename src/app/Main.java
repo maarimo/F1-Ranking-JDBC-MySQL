@@ -15,25 +15,27 @@ public class Main {
     public static void main(String args[]){
         try(Connection conn = Conexao.getConnection()){
             PilotoDAO dao = new PilotoDAOImpl(conn);
+            List<Piloto> ranking = new ArrayList<>();
+
 
             //Piloto piloto = new Piloto("Valteri Bottas", 3);
             //dao.inserir(piloto);
 
 
-            List<Piloto> ranking = new ArrayList<>();
+
 
             //atualizar
             if (!ranking.isEmpty()) {
-                Piloto piloto = ranking.get(1);
-                piloto.setPontuacao(407);
-                dao.atualizar(piloto);
+                Piloto p = ranking.get(2);
+                p.setPontuacao(407);
+                dao.atualizar(p);
             }
 
             ranking = dao.ranking();
             ranking.forEach(System.out::println);
 
 
-            //dao.deletar(41);
+            //dao.deletar(44);
 
 
 
